@@ -71,28 +71,28 @@ fun MapScreen2() {
     val cameraPositionState = rememberCameraPositionState {
         position = CameraPosition.fromLatLngZoom(ArequipaCenter, 15f) // Ajusta el nivel de zoom
     }
-
+//poligonos
     val mallAventuraPolygon = listOf(
         LatLng(-16.432292, -71.509145),
         LatLng(-16.432757, -71.509626),
         LatLng(-16.433013, -71.509310),
         LatLng(-16.432566, -71.508853)
     )
-
+//poligonos
     val parqueLambramaniPolygon = listOf(
         LatLng(-16.422704, -71.530830),
         LatLng(-16.422920, -71.531340),
         LatLng(-16.423264, -71.531110),
         LatLng(-16.423050, -71.530600)
     )
-
+//poligonos
     val plazaDeArmasPolygon = listOf(
         LatLng(-16.398866, -71.536961),
         LatLng(-16.398744, -71.536529),
         LatLng(-16.399178, -71.536289),
         LatLng(-16.399299, -71.536721)
     )
-
+//polilineas
     val route1 = listOf(
         LatLng(-16.409047, -71.536960),  // Centro de Arequipa
         LatLng(-16.422704, -71.530830),  // Parque Lambramani
@@ -100,7 +100,7 @@ fun MapScreen2() {
                 LatLng(-16.409047, -71.536960),  // Centro de Arequipa
 
     )
-
+//polilineas
     val route2 = listOf(
         LatLng(-16.398866, -71.536961),  // Plaza de Armas
         LatLng(-16.432292, -71.509145),  // Mall Aventura
@@ -141,14 +141,14 @@ fun MapScreen2() {
 
             Polyline(
                 points = route1,
-                color = Color.Blue,       // Color de la línea
-                width = 8f                // Grosor de la línea
+                color = Color.Blue,
+                width = 8f
             )
 
             Polyline(
                 points = route2,
-                color = Color.Green,      // Color de la línea
-                width = 8f                // Grosor de la línea
+                color = Color.Green,
+                width = 8f
             )
         }
     }
