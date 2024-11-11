@@ -20,6 +20,7 @@ import androidx.compose.ui.platform.LocalContext
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.BitmapDescriptor
 import com.google.maps.android.compose.Polygon
+import com.google.maps.android.compose.Polyline
 
 @Composable
 fun MapScreen() {
@@ -92,6 +93,20 @@ fun MapScreen2() {
         LatLng(-16.399299, -71.536721)
     )
 
+    val route1 = listOf(
+        LatLng(-16.409047, -71.536960),  // Centro de Arequipa
+        LatLng(-16.422704, -71.530830),  // Parque Lambramani
+        LatLng(-16.433415, -71.5442652),  // JLByR
+                LatLng(-16.409047, -71.536960),  // Centro de Arequipa
+
+    )
+
+    val route2 = listOf(
+        LatLng(-16.398866, -71.536961),  // Plaza de Armas
+        LatLng(-16.432292, -71.509145),  // Mall Aventura
+        LatLng(-16.3524187, -71.5675994) // Zamacola
+    )
+
     // Mover la cámara a Yura después de la inicialización
     LaunchedEffect(Unit) {
         cameraPositionState.animate(
@@ -122,6 +137,18 @@ fun MapScreen2() {
                 strokeColor = Color.Magenta,
                 fillColor = Color.Cyan.copy(alpha = 0.75f),
                 strokeWidth = 5f
+            )
+
+            Polyline(
+                points = route1,
+                color = Color.Blue,       // Color de la línea
+                width = 8f                // Grosor de la línea
+            )
+
+            Polyline(
+                points = route2,
+                color = Color.Green,      // Color de la línea
+                width = 8f                // Grosor de la línea
             )
         }
     }
