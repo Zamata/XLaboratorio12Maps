@@ -19,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             XLaboratorio12Theme {
-                MapScreen()
+                MapScreen2()
             }
         }
     }
